@@ -35,6 +35,20 @@ jobs:
       - name: Build
         run: npm run build
 
+      - name: Check production bundle
+        shell: bash
+        run: |
+          echo "=== DIST FILES ==="
+          ls -lah dist
+
+          echo "=== JSXDEV CHECK ==="
+          if grep -q "jsxDEV" dist/*.js; then
+            echo "ERROR: jsxDEV FOUND IN GITHUB BUILD"
+            exit 1
+          else
+            echo "OK: jsxDEV NOT FOUND"
+          fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
