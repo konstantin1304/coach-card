@@ -1,0 +1,381 @@
+/* =========================
+   RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #f2f3ee;
+  color: #222;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================
+   PAGE
+========================= */
+
+.page {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 80px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+
+/* =========================
+   COLUMNS
+========================= */
+
+.column {
+  width: 100%;
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+
+.intro__title {
+  margin: 0;
+
+  font-size: clamp(42px, 8vw, 68px);
+  line-height: 1;
+  font-weight: 400;
+}
+
+
+/* =========================
+   PROFILE CARD
+========================= */
+
+.profile-card {
+  background: #faf9f6;
+}
+
+.profile-card__heading {
+  padding: 26px 22px 18px;
+  text-align: center;
+
+  h2 {
+    margin: 0 0 8px;
+    font-weight: 400;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+.profile-card__photo {
+  min-height: 420px;
+  margin: 0 22px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #d8d8d3;
+  color: #777;
+}
+
+.profile-card__tagline {
+  margin: 0;
+  padding: 18px 22px;
+
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.profile-card__button {
+  min-height: 54px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e8e8e4;
+
+  text-transform: uppercase;
+
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #deded8;
+  }
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+  padding: 28px 24px;
+  background: #faf9f6;
+
+  h2 {
+    margin: 0 0 24px;
+    font-weight: 400;
+  }
+
+  p {
+    line-height: 1.5;
+  }
+}
+
+.about__keywords {
+  margin-top: 28px;
+
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  span {
+    width: calc(50% - 7px);
+    text-align: center;
+    font-size: 20px;
+  }
+}
+
+
+/* =========================
+   BENEFITS
+========================= */
+
+.benefits {
+  padding: 28px 24px;
+  background: #faf9f6;
+
+  h2 {
+    margin: 0 0 24px;
+    font-weight: 400;
+  }
+}
+
+.benefit {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  margin-bottom: 18px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  span {
+    flex: 0 0 58px;
+
+    font-size: 38px;
+    font-weight: 300;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+
+/* =========================
+   WIDE IMAGE
+========================= */
+
+.wide-image {
+  min-height: 140px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #d8d8d3;
+  color: #777;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+  padding: 28px 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+  background: #faf9f6;
+
+  h2 {
+    margin: 0 0 8px;
+    font-weight: 400;
+  }
+}
+
+.service-card {
+  padding: 26px 18px;
+
+  background: #ecece8;
+
+  text-align: center;
+
+  h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.4;
+  }
+}
+
+.services__button {
+  min-height: 54px;
+  margin-top: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #e8e8e4;
+
+  text-transform: uppercase;
+
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #deded8;
+  }
+}
+
+
+/* =========================
+   CONTACTS
+========================= */
+
+.contacts {
+  padding: 28px 24px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  background: #faf9f6;
+
+  h2 {
+    margin: 0 0 12px;
+    font-weight: 400;
+  }
+
+  a {
+    padding: 18px;
+
+    background: #ecece8;
+
+    text-align: center;
+
+    transition: background 0.2s ease;
+
+    &:hover {
+      background: #deded8;
+    }
+  }
+}
+
+
+/* =========================
+   DESKTOP
+========================= */
+
+@media (min-width: 768px) {
+  .page {
+    padding: 48px 32px 100px;
+
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 48px;
+  }
+
+  .column {
+    width: auto;
+    flex: 1 1 0;
+  }
+
+  .column--right {
+    padding-top: 78px;
+  }
+
+  .profile-card__photo {
+    min-height: 520px;
+  }
+}
+
+
+/* =========================
+   LARGE DESKTOP
+========================= */
+
+@media (min-width: 1024px) {
+  .page {
+    gap: 56px;
+  }
+
+  .about,
+  .benefits,
+  .services,
+  .contacts {
+    padding: 32px;
+  }
+
+  .profile-card__heading {
+    padding: 30px 28px 20px;
+  }
+
+  .profile-card__photo {
+    margin-right: 28px;
+    margin-left: 28px;
+  }
+
+  .profile-card__tagline {
+    padding: 20px 28px;
+  }
+}
