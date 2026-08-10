@@ -19,6 +19,7 @@ export default function App() {
           <LeftColumn t={t} />
           <RightColumn t={t} />
         </main>
+        jojo
       </>
   );
 }
