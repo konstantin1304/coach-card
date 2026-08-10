@@ -1,18 +1,16 @@
-export default function LeftColumn() {
+export default function LeftColumn({ t }) {
   return (
       <section className="column column--left">
         <div className="intro">
           <h1 className="intro__title">
-            Professional
-            <br />
-            Coaching
+            {t.intro.title}
           </h1>
         </div>
 
         <div className="profile-card">
           <div className="profile-card__heading">
-            <h2>Juriy</h2>
-            <p>Personal teacher</p>
+            <h2>{t.profile.name}</h2>
+            <p>{t.profile.role}</p>
           </div>
 
           <div className="profile-card__photo">
@@ -20,30 +18,31 @@ export default function LeftColumn() {
           </div>
 
           <p className="profile-card__tagline">
-            Teaching Mathematics and Physics
+            {t.profile.tagline}
           </p>
 
           <a href="#services" className="profile-card__button">
-            View services
+            {t.profile.button}
           </a>
         </div>
 
         <div className="about">
-          <h2>About me</h2>
+          <h2>{t.about.title}</h2>
 
           <p>
-            I help people.
+            {t.about.text1}
           </p>
 
           <p>
-            My approach is individual, structured and focused on real changes.
+            {t.about.text2}
           </p>
 
           <div className="about__keywords">
-            <span>1</span>
-            <span>2</span>
-            <span>3</span>
-            <span>4</span>
+            {t.about.keywords.map((keyword, index) => (
+                <span key={index}>
+              {keyword}
+            </span>
+            ))}
           </div>
         </div>
       </section>

@@ -1,9 +1,24 @@
-export default function LanguageSwitcher() {
+export default function LanguageSwitcher({
+                                           language,
+                                           setLanguage,
+                                         }) {
   return (
       <div className="language-switcher">
-        <button className="is-active">EN</button>
+        <button
+            className={language === 'en' ? 'is-active' : ''}
+            onClick={() => setLanguage('en')}
+        >
+          EN
+        </button>
+
         <span>/</span>
-        <button>DE</button>
+
+        <button
+            className={language === 'de' ? 'is-active' : ''}
+            onClick={() => setLanguage('de')}
+        >
+          DE
+        </button>
       </div>
   );
 }
